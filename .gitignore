@@ -1,0 +1,16 @@
+# macOS & 시스템 파일
+.DS_Store
+Thumbs.db
+
+# IDE/에디터 설정
+.vscode/
+.idea/
+*.iml
+
+# 로그 & 환경변수
+*.log
+.env
+.env.*.local
+
+# 기타 불필요한 것
+*.swp
