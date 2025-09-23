@@ -10,10 +10,10 @@ import KakaoScript from '@/providers/KakaoScript'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-    title: '믿고 사는 즐거움 SSG.COM',
-    description: '믿고 사는 즐거움 SSG.COM',
+    title: '효빈이가 개발중',
+    description: '효빈이가 개발중인 사이트 입니다.',
     icons: {
-        icon: '/favicon.ico',
+        icon: '/favicon.svg',
     },
 }
 
@@ -39,7 +39,8 @@ export default function RootLayout({
             <html lang="ko">
                 <body className={inter.className}>
                     <RecoilProvider>
-                        {children} <Footer />
+                        {children}
+                        <Footer />
                     </RecoilProvider>
                 </body>
                 <KakaoScript />

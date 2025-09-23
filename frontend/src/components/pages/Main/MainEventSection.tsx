@@ -18,14 +18,15 @@ export default function MainEventSection() {
     return (
         <section className="relative overflow-hidden pb-bottom min-h-[60vh] w-full  ">
             <div
-                className="absolute overflow-hidden top-0 right-0 bottom-[50px] left-0 bg-cover border-solid border-0 "
+                className="absolute overflow-hidden top-0 bottom-[40px] left-[10%] right-[10%] bg-cover"
                 style={{
                     backgroundImage: `url(${backgroundImage})`,
                     filter: 'blur(5px)',
-                    transition: 'background-image 1s ease-in-out ',
+                    transition: 'background-image 1s ease-in-out',
                 }}
             ></div>
-            <div className="absolute left-4 right-4 bottom-0 top-4 min-w overflow-hidden block">
+
+            <div className="absolute left-4 right-4 bottom-0 top-4 min-w overflow-hidden block ">
                 <Swiper
                     className="relative w-full h-full"
                     slidesPerView={1}
@@ -37,20 +38,9 @@ export default function MainEventSection() {
                     {mainEventImageData.map((item, idx) => {
                         return (
                             <SwiperSlide key={idx}>
-                                <div className="absolute w-full h-full duration-150">
-                                    <Image src={item.src} fill alt="메인광고" />
-                                </div>
-                                <div className="flex justify-center items-end w-full h-full">
-                                    <div className="flex flex-col items-center z-[1] max-w-[(100%-60px)] mb-[52px]">
-                                        <h3 className="flex flex-col items-center text-2xl font-bold text-white">
-                                            <span>{item.title1}</span>
-                                            <span>{item.title2}</span>
-                                        </h3>
-                                        <div className="mt-[10px] text-sm font-semibold text-white">
-                                            <span className="overflow-hidden text-ellipsis text-center">
-                                                {item.subTitle}
-                                            </span>
-                                        </div>
+                                <div className="absolute inset-0 flex items-center justify-center ">
+                                    <div className="relative w-[500px] h-[800px]">
+                                        <Image src={item.src} alt="메인광고" fill className="object-contain" />
                                     </div>
                                 </div>
                             </SwiperSlide>

@@ -2,6 +2,7 @@
 const nextConfig = {
     images: {
         domains: [
+            'i.pinimg.com',
             'simg.ssgcdn.com',
             'sitem.ssgcdn.com',
             'sui.ssgcdn.com',
